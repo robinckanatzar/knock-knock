@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2MD-XH-NPo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--J-Chart-->
+        <scene sceneID="h51-oT-Xsz">
+            <objects>
+                <viewController storyboardIdentifier="JounceViewController" id="2MD-XH-NPo" customClass="JounceViewController" customModule="knock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OZt-sI-rLU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CVn-RX-aLw">
+                                <rect key="frame" x="8" y="52" width="398" height="231.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knock Detection with Jounce in Background" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0B-ge-WBN">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfV-t9-f82">
+                                        <rect key="frame" x="0.0" y="67.5" width="398" height="57.5"/>
+                                        <string key="text">Jounce, also known as snap, is the fourth derivative of the position vector with respect to time, or the rate of change of the jerk with respect to time. Equivalently, it is the second derivative of acceleration or the third derivative of velocity.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">* Press start button below * Place phone in front pants pocket with the screen facing outward. * Close screen * Perform knock knock 3 times. (6 total knocks) * Open your phone and press the stop button below. * View results below stop button * Restart app to use knock on first tab with new threshold</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-Wi-XHz">
+                                        <rect key="frame" x="0.0" y="135" width="398" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohc-Ou-78I">
+                                        <rect key="frame" x="0.0" y="174" width="398" height="57.5"/>
+                                        <string key="text">Deactivate silent mode (switch on side of phone) and turn up volume. Close / lock phone. Put phone in front pocket, screen facing outward. Knock (2 knock intervals). You will hear a DING when a double knock is recognized. When done, open phone to view data on chart.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">* Press start button below * Place phone in front pants pocket with the screen facing outward. * Close screen * Perform knock knock 3 times. (6 total knocks) * Open your phone and press the stop button below. * View results below stop button * Restart app to use knock on first tab with new threshold</string>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmU-RY-FOd" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="291.5" width="398" height="562.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kd2-0n-H6J" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CVn-RX-aLw" secondAttribute="bottom" constant="8" id="0qM-HF-ps2"/>
+                            <constraint firstItem="hmU-RY-FOd" firstAttribute="top" secondItem="CVn-RX-aLw" secondAttribute="bottom" constant="8" id="Eoq-uA-nHQ"/>
+                            <constraint firstItem="hmU-RY-FOd" firstAttribute="leading" secondItem="Kd2-0n-H6J" secondAttribute="leading" constant="8" id="Epr-av-TkJ"/>
+                            <constraint firstItem="Kd2-0n-H6J" firstAttribute="trailing" secondItem="hmU-RY-FOd" secondAttribute="trailing" constant="8" id="Jmb-af-yw8"/>
+                            <constraint firstItem="CVn-RX-aLw" firstAttribute="top" secondItem="Kd2-0n-H6J" secondAttribute="top" constant="8" id="Tvo-ZA-JLH"/>
+                            <constraint firstItem="Kd2-0n-H6J" firstAttribute="trailing" secondItem="CVn-RX-aLw" secondAttribute="trailing" constant="8" id="WQ5-sU-cfY"/>
+                            <constraint firstItem="Kd2-0n-H6J" firstAttribute="bottom" secondItem="hmU-RY-FOd" secondAttribute="bottom" constant="8" id="hbm-xd-eEa"/>
+                            <constraint firstItem="CVn-RX-aLw" firstAttribute="leading" secondItem="Kd2-0n-H6J" secondAttribute="leading" constant="8" id="mCa-My-PsT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kd2-0n-H6J"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="J-Chart" selectedImage="cloud.fill" catalog="system" id="bxY-Ed-fSe"/>
+                    <connections>
+                        <outlet property="chartView" destination="hmU-RY-FOd" id="x8L-ZH-4gE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkc-Qa-6be" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.fill" catalog="system" width="64" height="42"/>
+    </resources>
+</document>
